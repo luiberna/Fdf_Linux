@@ -6,7 +6,7 @@
 /*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 14:42:42 by luiberna          #+#    #+#             */
-/*   Updated: 2024/03/25 15:01:03 by luiberna         ###   ########.fr       */
+/*   Updated: 2024/03/25 16:56:29 by luiberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	map_name_veri(char *map_name)
 	int		len;
 
 	s = ".fdf";
-	len = strlen(map_name);
-	if (strncmp(&map_name[len - 4], s, 4))
+	len = ft_strlen(map_name);
+	if (ft_strncmp(&map_name[len - 4], s, 4))
 		return (write(2, "Error, not .fdf file\n", 22), 1);
 	else
 		return (0);
