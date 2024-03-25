@@ -6,13 +6,13 @@
 #    By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/27 12:32:15 by luiberna          #+#    #+#              #
-#    Updated: 2024/03/22 16:27:44 by luiberna         ###   ########.fr        #
+#    Updated: 2024/03/25 15:27:44 by luiberna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-SRCS = fdf.c init.c verifiers.c free.c map.c draw_alg.c projections.c color.c keys.c
+SRCS = fdf.c init.c verifiers.c free.c map.c draw_alg.c projections.c color.c keys.c rotations.c
 
 CC = cc
 

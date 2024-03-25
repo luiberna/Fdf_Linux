@@ -6,37 +6,38 @@
 /*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:45:37 by luiberna          #+#    #+#             */
-/*   Updated: 2024/03/22 03:17:43 by luiberna         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:10:05 by luiberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int		create_trgb(int t, int r, int g, int b)
+int	create_trgb(int t, int r, int g, int b)
 {
 	return (t << 24 | r << 16 | g << 8 | b);
 }
-int		world_color(float percent)
+
+int	world_color(float percent)
 {
-    if (percent < 0.001)
-        return create_trgb(0, 0, 51, 102); // Deep blue for deep ocean
-    else if (percent < 0.007)
-        return create_trgb(0, 51, 153, 255); // Medium blue for normal height water
-    else if (percent < 0.009)
-        return create_trgb(0, 102, 204, 255); // Light aqua for coastal regions
-    else if (percent < 0.01)
-        return create_trgb(0, 0, 204, 102); // Light green for plains
-    else if (percent < 0.1)
-        return create_trgb(0, 102, 204, 102); // Medium green for lowlands
-    else if (percent < 0.4)
-        return create_trgb(0, 153, 102, 51); // Brown for hills and plateaus
+	if (percent < 0.001)
+		return (create_trgb(0, 0, 51, 102));
+	else if (percent < 0.007)
+		return (create_trgb(0, 51, 153, 255));
+	else if (percent < 0.009)
+		return (create_trgb(0, 102, 204, 255));
+	else if (percent < 0.01)
+		return (create_trgb(0, 0, 204, 102));
+	else if (percent < 0.1)
+		return (create_trgb(0, 102, 204, 102));
+	else if (percent < 0.4)
+		return (create_trgb(0, 153, 102, 51));
 	else if (percent < 0.8)
-		return create_trgb(0, 153, 102, 51); // Dark brown for high mountain ranges
-    else
-        return create_trgb(0, 255, 255, 255); // White for snow-capped peaks
+		return (create_trgb(0, 153, 102, 51));
+	else
+		return (create_trgb(0, 255, 255, 255));
 }
 
-int		make_color(float percent, int flag, int r, int g)
+int	make_color(float percent, int flag, int r, int g)
 {
 	if (flag == 0)
 		return (0x7FFFD4);

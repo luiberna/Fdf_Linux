@@ -6,7 +6,7 @@
 /*   By: luiberna <luiberna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 15:47:04 by luiberna          #+#    #+#             */
-/*   Updated: 2024/03/22 17:50:07 by luiberna         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:50:37 by luiberna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ typedef struct s_map
 	int			width;
 	int			z_max;
 	int 		z_min;
-	float		steep;
-	int 		direction;
 	t_map_3d	**map_3d;
 }					t_map;
 
@@ -82,12 +80,12 @@ typedef struct s_fdf
 	int			bpp;
 	int			endian;
 	int			line_lenght;
-	//
 	float		rgb_percent;
 	float		range_z;
 	int			new_max;
 	int			flag;
-	//
+	float		steep;
+	int 		direction;
 	t_map		*map;
 	t_isometric iso;
 	t_camera	camera;
