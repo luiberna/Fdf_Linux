@@ -20,15 +20,15 @@ The result is an interactive 3D visualization built entirely from scratch in C.
 
 ### Height Map (Color Gradient)
 
-![Height Map](Screenshot 2026-02-09 at 10.03.45.png)
+![Height Map](screenshot_1.png)
 
 ### 3D Wireframe Rendering
 
-![3D View](Screenshot 2026-02-09 at 10.05.45.png)
+![3D View](screenshot_2.png)
 
 ### Grid / Line Rendering
 
-![Wireframe](Screenshot 2026-02-09 at 10.06.19.png)
+![Wireframe](screenshot_3.png)
 
 ---
 
